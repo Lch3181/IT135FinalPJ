@@ -1,0 +1,34 @@
+form
+{
+	margin:10px;
+	padding-top:30px;
+}
+label
+{
+	display:inline-block;
+	min-width:60px; 
+	text-align:right;
+}
+span
+{
+	border-radius:5px;
+	margin:3px;padding:5px;
+	background-color:#C0C0C0;
+	border:3px ridge;
+	display:inline-block;
+	cursor:pointer;
+}
+#Non-animated
+{
+	width:150px;
+	height:150px;
+	transform: rotate(0deg);
+	opacity: 1;
+}
+#Animated
+{
+	width:150px;
+	height:150px;
+	transform: rotate(0deg);
+	opacity: 1;
+}
