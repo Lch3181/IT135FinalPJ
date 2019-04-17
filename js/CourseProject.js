@@ -37,7 +37,6 @@ function inputHandler(e)
 //animate the image base on user button click
 function spanHandler(e)
 {
-	console.log(e.target.id);
 	if(e.target.id == "IncWidth")
 	{
 		$("#Animated").animate({width: "+=50"}, 500);
@@ -78,7 +77,32 @@ function spanHandler(e)
 	{
 		$("#Animated").fadeOut(1000);
 	}//end else if
+	else if(e.target.id == "PrimeNumber")
+	{
+		$("#primeNumberOutput").empty();
+		PrimeNumbers(100);
+	}//end else if
 }//end span handler
+
+//function to print prime numbers
+function PrimeNumbers(max)
+{
+	for (var i = 2; i <= max; i++) 
+	{
+    	var notPrime = false;
+    	for (var j = 2; j < i; j++) 
+    	{
+        	if (i%j==0) 
+        	{
+            	notPrime = true;
+        	}//end if
+    	}//end for loop
+    	if (notPrime === false) 
+    	{
+    		$("#primeNumberOutput").append(i+" ");
+    	}//end if
+	}//end for loop
+}//end print prime number
 
 //Validation
 $(document).ready
